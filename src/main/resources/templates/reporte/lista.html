@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+
+	<header th:replace="layout/layout :: header"></header>
+
+	<div class="container py-4">
+		<div class="card bg-light">
+			<div class="card-header" >Reportes de Clientes</div>
+			<div class="card-body">
+				<h4 class="card-title">
+					<a class="btn btn-primary btn-xs mx-2" th:href="@{/reporte/reporteconcesionario/(format=pdf)}">Clientes Concesionario PDF</a>
+					<a class="btn btn-primary btn-xs mx-2" th:href="@{/reporte/reporteubicacion/(format=pdf)}">Clientes Ubicación PDF</a>
+				</h4>
+			</div>
+		</div>
+	</div>
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>
